@@ -1,0 +1,204 @@
+// @import '../../variables';
+@import '../variables';
+
+.page-header {
+  margin-top: 15px;
+}
+.plant-users {
+  padding: 35px;
+  font-family: "ABBvoice-Rg";
+  table.table {
+    width: 100%;
+    text-align: left;
+    border-spacing: 0;
+    font-size: 14px;
+    font-family: "ABBvoice-Rg";
+    thead {
+      th {
+        padding: 10px 20px;
+        font-weight: normal;
+        color: $elcp-gray3;
+        border-bottom: 1px solid $elcp-gray5;
+        font-size: 14px;
+      }
+    }
+    tbody {
+      margin-bottom: 10px;
+      td {
+        padding: 10px 20px;
+        font-weight: normal;
+        border-bottom: 1px solid $elcp-gray7;
+        font-size: 12px;
+        .plant-user-name,
+        .plant-user-role {
+          margin-bottom: 5px;
+          font-size: 14px;
+          font-family: "ABBvoice-Md";
+        }
+        .plant-user-email {
+          margin-top: 5px;
+          text-decoration: underline;
+        }
+        .mat-icon {
+          vertical-align: middle;
+          font-size: 16px;
+          width: auto;
+          height: auto;
+          margin-right: 5px;
+        }
+        &.gold {
+          color: $gold-primary;
+        }
+      }
+    }
+  }
+  p.role-description {
+    font-size: 12px;
+    padding: 20px 0;
+    margin: 0;
+    box-sizing: border-box;
+    height: 56px;
+    display: block;
+
+    .mat-icon {
+      vertical-align: middle;
+      font-size: 16px;
+      width: auto;
+      height: auto;
+      margin-right: 5px;
+    }
+  }
+  .avatar {
+    height: 50px;
+    width: 50px;
+    color: $elcp-gray9;
+    display: block;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+    text-align: center;
+    border: 2px solid $elcp-gray9;
+    position: relative;
+    &:after {
+      position: absolute;
+      display: block;
+      content: " ";
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      border-radius: 50%;
+      border: 2px solid $elcp-gray9;
+    }
+    & > img {
+      width: 50px;
+      height: 50px;
+      border: 1px solid $elcp-gray9;
+    }
+    & > span {
+      line-height: 50px;
+      font-size: 1.4em;
+      font-family: "ABBvoice-Bd";
+      letter-spacing: 1px;
+    }
+    &.primary {
+      border-color: $blue-primary;
+    }
+    &.gold {
+      border-color: $gold-primary;
+    }
+  }
+
+//   input.form-control,
+//   select.form-control {
+//     padding: 3px 10px;
+//     height: 35px;
+//     box-sizing: border-box;
+//     // width: 300px;
+//     border-radius: 0;
+//     border: 1px solid $elcp-gray5;
+//     -webkit-appearance: none;
+//     -webkit-border-radius: 0px;
+//     &.haserror {
+//       border-color: $red-primary;
+//       background-color: transparentize($red-primary, 0.95);
+//     }
+//     &:active,
+//     &:focus {
+//       outline: none;
+//     }
+//   }
+// }
+// .text-orange {
+//   color: $orange-primary;
+// }
+
+// ::ng-deep {
+//   .mat-flat-button {
+//     border-radius: 5px;
+//     font-size: 14px;
+//     font-weight: normal;
+//     padding: 2px 20px;
+//     background-color: $elcp-gray8;
+//     font-family: "ABBvoice-Rg";
+//     &.mat-primary {
+//       background-color: $blue-primary;
+//     }
+//   }
+//   .mat-select.form-control {
+//     height: 35px;
+//     border: 1px solid $elcp-gray5;
+//     &.haserror {
+//       border-color: $red-primary;
+//       background-color: transparentize($red-primary, 0.95);
+//     }
+//     .mat-select-trigger {
+//       height: 100%;
+//       padding: 8px;
+//       & > * {
+//         font-family: "ABBvoice-Rg";
+//         font-size: 12px;
+//         line-height: 20px;
+//       }
+//     }
+//   }
+//   .cdk-overlay-container {
+//     .mat-menu-content .mat-menu-item {
+//       font-family: "ABBvoice-Rg";
+//       font-size: 12px;
+//       height: 36px;
+//       line-height: 36px;
+//       padding-left: 12px;
+//       .mat-icon {
+//         width: 16px;
+//         height: 16px;
+//         font-size: 16px;
+//         margin-right: 10px;
+//       }
+//     }
+//     .cdk-overlay-pane .mat-select-panel.elcp-mat-select-panel {
+//       top: 38px;
+//       left: 16px;
+//       border-radius: 0;
+//       .mat-option {
+//         font-family: "ABBvoice-Rg";
+//         font-size: 12px;
+//       }
+   // }
+ // }
+}
+
+@media (max-width: 800px) {
+  .plant-users {
+    padding: 15px;
+  }
+  .table-responsive {
+    overflow-x: auto;
+    table.table {
+      th,
+      td {
+        white-space: nowrap;
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+<mat-card class="site-page plant-users">
+
+    <div class="table-responsive">
+        <table class="table">
+            <thead *ngIf="Devicedtaarray && Devicedtaarray.length > 0">
+                <tr>
+                        <th>ID</th>
+                        <th>serialNumber</th>
+                        <th>deviceTypeName</th>
+                        <!-- <th>Name</th>
+                        <th>slaveId</th>-->
+                        <th>Type</th> 
+                       
+                </tr>
+            </thead>
+            <tbody *ngIf="Devicedtaarray && Devicedtaarray.length > 0">
+                <tr *ngFor="let user of Devicedtaarray;index as i">
+                    <td >{{ user.id }}</td>
+                    <td >{{ user.serialNumber }}</td>
+                    <td   style=" width: 1em; text-align: left;">
+                            {{ user.deviceTypeName }}
+                        <button mat-icon-button [matMenuTriggerFor]="menu">
+                            <mat-icon>more_vert</mat-icon>
+                        </button>
+                        <mat-menu #menu="matMenu">
+                                <button mat-menu-item>
+                                        <mat-icon>edit</mat-icon>
+                                        <span  (click)="openDialog()">Edit Device</span>
+                                        <span  (click)="openDialog()">Delete</span>
+
+                                        <!-- <span (click)="updateSample(i, updateSampleModal)"></span> -->
+                                </button> 
+                                <!-- <button mat-menu-item>   <mat-icon>delete</mat-icon>
+                                        <span (click)="deleteDeviceclick($event,i)">Delete Device</span>
+                                </button>                  -->
+                        </mat-menu>
+                    </td> 
+                     <!--<td>{{ user.deviceTypeName }}</td>
+                    <td>{{ user.name }}</td>
+                    <td>{{ user.slaveId }}</td>-->
+                    <td>{{ user.type }}</td> 
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    </mat-card>
+
+
