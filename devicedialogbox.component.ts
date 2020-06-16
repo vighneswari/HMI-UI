@@ -24,11 +24,12 @@ export class DevicedialogboxComponent implements OnInit {
       this.dialogRef.close();
     }
   ngOnInit() {    
-    this.updateDevice();
+//     this.updateDevice();
 
     }
-    updateDevice() {
-      this.settingService.updateDevice().subscribe((resp: any[]) => {
-        this.Updatedtaarray=resp;)}
-      }
+//     updateDevice() {
+//       this.settingService.updateDevice().subscribe((resp: any[]) => {
+//         this.Updatedtaarray=resp;)}
+//       }
 
+                                                   }
